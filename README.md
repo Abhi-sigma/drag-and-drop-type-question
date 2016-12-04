@@ -4,3 +4,4 @@ in the blanks.The user is able to move already dropped option to the other blank
 drag and drops the last option into the blank.
 
 <h1>See the live action at https://helpingcow.com/PTE/fill_in_blanks</h1>
+Note:login will be required,currently google login only supported.
