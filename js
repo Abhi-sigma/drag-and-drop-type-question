@@ -3,6 +3,8 @@ var answer_pair=[];
 var check_answer_pair=[];
 var draggables_value={};
 ////////////////////////////////////////////////////////////////////////////////////////
+
+//on each drop increases the count and checks if the count is equal to number of options
 function check_answer_button_display(){
     var count = 0;
     for (var i in drag_drop_pairs) {
@@ -15,6 +17,9 @@ function check_answer_button_display(){
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// the main jquery based script
 function init(){
 
 document.getElementById("checkans").style.display="none";
@@ -30,10 +35,17 @@ $("#answer").children().draggable({
             if(drag_drop_pairs.hasOwnProperty(key)){
                 console.log("has");
                 console.log(drag_drop_pairs[key]);
-                if (drag_drop_pairs[key]==draggable_id){
-                    console.log(String(key))
+                if (drag_drop_pairs[key]==draggable_id){ 
+		
+		//this block checks if the option is already been dragged
+		//if yes,than that option is in drag drop pair,so if dragged again it renables the blank which was
+		//disabled once the word was drpped in the blank.
+                    
+		    console.log(String(key))
                     console.log("true");
                     $("#"+key).droppable("enable")
+		    
+		    /
 
 
                 }
